@@ -1,13 +1,8 @@
 {
   "name": "@jesses/vim-prettier",
-  "author": "Jesse Stuart <hi@jessestuart.com>",
-  "version": "0.0.1",
   "description": "Vim plugin for prettier",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jessestuart/vim-prettier.git"
-  },
+  "version": "0.0.1",
+  "author": "Jesse Stuart <hi@jessestuart.com>",
   "dependencies": {
     "@prettier/plugin-lua": "0.0.1",
     "@prettier/plugin-php": "0.11.2",
@@ -20,5 +15,11 @@
     "@semantic-release/git": "7.0.16",
     "renovate": "19.20.0",
     "semantic-release": "15.13.19"
+  },
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jessestuart/vim-prettier.git"
   }
 }
