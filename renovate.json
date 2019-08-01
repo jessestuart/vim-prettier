@@ -1,0 +1,7 @@
+{
+  "automerge": true,
+  "extends": ["config:base", ":semanticCommits", ":rebaseStalePrs"],
+  "labels": ["renovate"],
+  "major": { "automerge": false },
+  "prHourlyLimit": 0
+}

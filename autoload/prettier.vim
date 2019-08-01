@@ -81,7 +81,7 @@ function! prettier#Prettier(...) abort
     let l:cmd = l:execCmd . prettier#resolver#config#resolve(
           \ prettier#resolver#preset#resolve(l:config),
           \ l:partialFormatEnabled,
-          \ l:startSelection, 
+          \ l:startSelection,
           \ l:endSelection)
 
     " close quickfix if it is opened

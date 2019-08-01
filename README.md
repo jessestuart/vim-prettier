@@ -1,13 +1,16 @@
-## vim-prettier [![Travis CI Build Status](https://travis-ci.org/prettier/vim-prettier.svg?branch=master)](https://travis-ci.org/prettier/vim-prettier) [![Discord](https://img.shields.io/discord/435481502113857536.svg)](https://discord.gg/9bWM9PH)
+## vim-prettier [![Travis CI Build Status][travis-ci]][travis-ci 2] [![Discord][shields]][discord]
 
 A vim plugin wrapper for prettier, pre-configured with custom default prettier
 settings.
 
 ---
 
-**Note:** We are currently working towards a major release on branch `release/1.x`, while under development bugfixes will be applied to master branch and then ported back to `release/1.x` branch.
+**Note:** We are currently working towards a major release on branch
+`release/1.x`, while under development bugfixes will be applied to master branch
+and then ported back to `release/1.x` branch.
 
-If you have feature request and/or suggestions please comment on issue [1.0 release](https://github.com/prettier/vim-prettier/issues/126)
+If you have feature request and/or suggestions please comment on issue [1.0
+release][github]
 
 ---
 
@@ -19,8 +22,7 @@ have/support the "@format" pragma annotation in the header of the file.
 
 ### INSTALL
 
-Install with [vim-plug](https://github.com/junegunn/vim-plug), assumes node and
-yarn|npm installed globally.
+Install with [vim-plug][github 2], assumes node and yarn|npm installed globally.
 
 ```vim
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -36,7 +38,8 @@ or simply enable for all formats by:
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 ```
 
-For those using [vim-pathogen](https://github.com/tpope/vim-pathogen), you can run the following in a terminal:
+For those using [vim-pathogen][github 3], you can run the following in a
+terminal:
 
 ```
 cd ~/.vim/bundle
@@ -73,23 +76,29 @@ or
 :Prettier
 ```
 
-If your are on vim 8+ you can also trigger async formatting by:
+If you are on vim 8+ you can also trigger async formatting by:
 
 ```vim
 :PrettierAsync
 ```
 
-You can send to prettier your entire buffer but ensure that it formats only your selection.
+You can send to prettier your entire buffer but ensure that it formats only your
+selection.
 
-**note: ** differs from `:PrettierFragment` by sending the entire buffer to prettier, allowing identation level to be preserved, but it requires the whole file to be valid.
+**note: ** differs from `:PrettierFragment` by sending the entire buffer to
+prettier, allowing identation level to be preserved, but it requires the whole
+file to be valid.
 
 ```vim
 :PrettierPartial
 ```
 
-You can send to prettier your current selection as a fragment of same type as the file being edited.
+You can send to prettier your current selection as a fragment of same type as
+the file being edited.
 
-**note: ** differs from `:PrettierFragment` by sending only the current selection to prettier, this allows for faster formatting but wont preserve indentation.
+**note: ** differs from `:PrettierFragment` by sending only the current
+selection to prettier, this allows for faster formatting but wont preserve
+indentation.
 
 ```vim
 :PrettierFragment
@@ -151,14 +160,15 @@ By default parsing errors will open the quickfix but can also be disabled
 let g:prettier#quickfix_enabled = 0
 ```
 
-By default selection formatting will be running `:PrettierFragment` but we can set
-`:PrettierPartial` as the default selection formatting by:
+By default selection formatting will be running `:PrettierFragment` but we can
+set `:PrettierPartial` as the default selection formatting by:
 
 ```vim
 let g:prettier#partial_format=1
 ```
 
-By default we auto focus on the quickfix when there are errors but can also be disabled
+By default we auto focus on the quickfix when there are errors but can also be
+disabled
 
 ```vim
 let g:prettier#quickfix_auto_focus = 0
@@ -228,3 +238,11 @@ let g:prettier#config#prose_wrap = 'preserve'
 ### REQUIREMENT(S)
 
 If prettier installation can't be found no code formatting will happen
+
+[discord]: https://discord.gg/9bWM9PH
+[github]: https://github.com/prettier/vim-prettier/issues/126
+[github 2]: https://github.com/junegunn/vim-plug
+[github 3]: https://github.com/tpope/vim-pathogen
+[shields]: https://img.shields.io/discord/435481502113857536.svg
+[travis-ci]: https://travis-ci.org/prettier/vim-prettier.svg?branch=master
+[travis-ci 2]: https://travis-ci.org/prettier/vim-prettier
