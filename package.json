@@ -1,7 +1,7 @@
 {
   "name": "@jesses/vim-prettier",
   "description": "Vim plugin for prettier",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Jesse Stuart <hi@jessestuart.com>",
   "dependencies": {
     "@prettier/plugin-lua": "0.0.1",
