@@ -90,8 +90,22 @@ let g:prettier#config#arrow_parens = get(g:,'prettier#config#arrow_parens', 'avo
 
 " Print trailing commas wherever possible when multi-line.
 " none|es5|all
-" default: 'none'
-let g:prettier#config#trailing_comma = get(g:,'prettier#config#trailing_comma', 'none')
+let g:prettier#config#trailing_comma = get(g:,'prettier#config#trailing_comma', 'all')
+
+" flow|babylon|typescript|postcss|json|graphql
+let g:prettier#config#parser = get(g:,'prettier#config#parser', 'flow')
+
+" cli-override|file-override|prefer-file
+let g:prettier#config#config_precedence = get(g:, 'prettier#config#config_precedence', 'prefer-file')
+
+" always|never|preserve
+let g:prettier#config#prose_wrap = get(g:, 'prettier#config#prose_wrap', 'preserve')
+
+" css|strict|ignore
+let g:prettier#config#html_whitespace_sensitivity = get(g:, 'prettier#config#html_whitespace_sensitivity', 'css')
+
+" Don't leave the quicklist focused on error.
+let g:prettier#quickfix_auto_focus = get(g:, 'prettier#quickfix_auto_focus', 1)
 
 " synchronous by default
 command! -nargs=? -range=% Prettier call prettier#Prettier(g:prettier#exec_cmd_async, <line1>, <line2>, g:prettier#partial_format)
@@ -114,7 +128,7 @@ command! -nargs=? -range=% PrettierCliPath call prettier#PrettierCliPath()
 " sends selected text to prettier cli for formatting
 command! -nargs=? -range=% PrettierFragment call prettier#Prettier(g:prettier#exec_cmd_async, <line1>, <line2>, 0)
 
-" sends entire buffer to prettier cli but format just selection 
+" sends entire buffer to prettier cli but format just selection
 command! -nargs=? -range=% PrettierPartial call prettier#Prettier(g:prettier#exec_cmd_async, <line1>, <line2>, 1)
 
 " map command
